@@ -8,3 +8,20 @@ Functions and Callbacks
 - A function finishes as soon as it sees the return keyword. 
 - Every context has a thread of execution, functions, global context.  
 - A new function means a new execution context
+- When you are passing an variable, for example:
+  
+  const numArr = [1,2,3]
+  function multipleBy2(ar){
+    //multiply each element of the array
+  }
+  const multiplied = multiplyBy2(numArr)
+  
+  - In this case, the variable num, when passed in the function, the paramter arr refers to the value of         numArr. 
+  - This means, that arr is referencing the value of numArr. If we manipulate the array directly (mutate), 
+    there will be a, what we call a side effect.
+    
+ - So the principle should be that arrays should remain unmutated. 
+ - Primitive values are copied to the new variable.
+ - Variables which are non-primitive, are given a reference to that value. (array, object, functions)
+ - Functions are what we call, first class objects. 
+ - They can be treated like objects
