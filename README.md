@@ -76,3 +76,5 @@ Now, when increment counter is called, the execution context of incrememntCounte
 - Scope is at any line of the execution, what data do I have available to me. 
 - JS is a lexically statically scoping language. 
 - Because of this rule, the data from local memory of the outer function is returned with the inner function. 
+- When inner function is returned out, the live data is attached through a hidden property called scope. 
+- 
