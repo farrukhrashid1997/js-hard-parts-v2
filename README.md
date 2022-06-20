@@ -67,3 +67,5 @@ Now, when increment counter is called, the execution context of incrememntCounte
 - What about, if a variabe is not being used in the inner function, will that be included in the backpack?
   - In modern implementation, JS checks if the variable referenced is being used in the inner function, if not its not included in the backpack. This is to 
     ensure to avoid a memory leak. 
+
+- When a function within a function is declared, you gotta bond to the local variable environment through the hidden scope property. 
