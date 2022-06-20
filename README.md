@@ -70,3 +70,9 @@ Now, when increment counter is called, the execution context of incrememntCounte
 
 - When a function within a function is declared, you gotta bond to the local variable environment through the hidden scope property. 
 - JS is a lexically/static scoped language. 
+- Local memory is sometimes called the variable environment. 
+- This backpack is called sometimes C.O.V.E (Closed over variable environment)
+- Another more famous name is, which shows your understanding is: Persistent Lexical Scope Referenced Data (P.L.S.R.D)
+- Scope is at any line of the execution, what data do I have available to me. 
+- JS is a lexically statically scoping language. 
+- Because of this rule, the data from local memory of the outer function is returned with the inner function. 
