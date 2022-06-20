@@ -33,3 +33,34 @@ Closures
 - The state is usually the live data at that particular moment of execution.
 - We can achieve memoizaition, using closures. 
 - Many design patterns use closures. 
+- A function definition is basically a value. 
+- Javascript is a syncrhonous language. 
+- Lets take an example:
+  function outer(){
+    let counter = 0;
+    function incrementCounter() {
+      counter++;
+    }
+    incrementCounter();
+   }
+Now, when increment counter is called, the execution context of incrememntCounter starts. When it runs it, the counter variable inside its own execution context isnt found, so then it goes to the very next execution context from the callstack. (down in the callstack)
+
+- Lets take an example: 
+
+  function outer(){
+  let counter = 0;
+  function incrementCounter(){counter++}
+  return incrementCounter;
+  }
+  
+  const myNewFunction = outer();
+  myNewFunction();
+  myNewFunction();
+  
+  Here's what is happening:
+   - The function outer is run, and returns the value (function definition of incrementCounter to myNewFunction.
+   - Now when myNewFunc runs, it doesnt find the counter variable in its local memory, so it checks the global memory, its not there, so what do we do?
+   - JS basically, when a function is returned, it stores in its backpack the surrounding variables from the memory. 
+   - So now, when myNewFunction will not find it in its local memory, it will go out and check the backpack of the function definition before going to the global context. 
+   - This elegant feature can be used to limit the number of times a function can run. 
+   - The result of running this function would be 2.
