@@ -64,3 +64,6 @@ Now, when increment counter is called, the execution context of incrememntCounte
    - So now, when myNewFunction will not find it in its local memory, it will go out and check the backpack of the function definition before going to the global context. 
    - This elegant feature can be used to limit the number of times a function can run. 
    - The result of running this function would be 2.
+- What about, if a variabe is not being used in the inner function, will that be included in the backpack?
+  - In modern implementation, JS checks if the variable referenced is being used in the inner function, if not its not included in the backpack. This is to 
+    ensure to avoid a memory leak. 
