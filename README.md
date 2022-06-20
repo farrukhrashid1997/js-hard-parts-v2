@@ -69,3 +69,4 @@ Now, when increment counter is called, the execution context of incrememntCounte
     ensure to avoid a memory leak. 
 
 - When a function within a function is declared, you gotta bond to the local variable environment through the hidden scope property. 
+- JS is a lexically/static scoped language. 
