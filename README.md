@@ -31,4 +31,5 @@ Functions and Callbacks
 
 Closures
 - The state is usually the live data at that particular moment of execution.
-- 
+- We can achieve memoizaition, using closures. 
+- Many design patterns use closures. 
