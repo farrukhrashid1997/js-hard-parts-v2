@@ -25,3 +25,10 @@ Functions and Callbacks
  - Variables which are non-primitive, are given a reference to that value. (array, object, functions)
  - Functions are what we call, first class objects. 
  - They can be treated like objects
+ -  The outer function which takes in the baby function - Higher order function 
+ -  The function that is passed into the HOF is called the callback. 
+ -  Any function that takes in a function or returns a function is called a HOF.
+
+Closures
+- The state is usually the live data at that particular moment of execution.
+- 
