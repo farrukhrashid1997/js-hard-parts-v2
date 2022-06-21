@@ -77,4 +77,23 @@ Now, when increment counter is called, the execution context of incrememntCounte
 - JS is a lexically statically scoping language. 
 - Because of this rule, the data from local memory of the outer function is returned with the inner function. 
 - When inner function is returned out, the live data is attached through a hidden property called scope. 
-- 
+
+Asynchronous Javascript
+
+- Javascript is a synchronous language, we finish one line and then go to the next one. 
+- As of now there are three things in the JS engine, the callstack, the thread of execution and the local memory.
+- Typically a browser is running Javascript. 
+- Javascript doesnt have the ability to make network requests. 
+- The browser is an app which has other features apart from running Javascript
+- Browser enables:  network requests(xhr/fetch), Rendering (its in the web browser, the HTML DOM(Document)), Timer (setTimeout)
+- Javascript even does not have a feature of a timer
+- Javascript gets the features mentioned above through the browser, through maybe an interface
+- Basically Javascript has a setTimer function which will mainly call the timer api in the browser and move on. 
+- So this means the timer wont be blocking the anything in the callstack.
+- setTimeout(() => console.log("yo"), 1000) - This code, this line will call the browser api called timer, the callback defined will be pushed to the CALLBACK QUEUE. Until the sycronous code from the global context is fully run, nothing will run from the callback queue. 
+- Now, at every line of execution, there is a little feature in Javascript which will check if the callstack is empty, if yes, it will check the callback queue to run any pending function, if it not empty (Callstack), it will not even bother to check the callback queue. This little feature is called the Event loop. 
+- And, thus this was the entire model until es6 of the whole javascript. 
+- Event loop will pick up the code from callback queue and put it on the callstack, if the callstack is empty. Event loop is pretty amazing.
+- Event loop is constantly running as long as our application is running. 
+- Imagine if you re calling a twitter api, now the function that should run on completion of that api (the callback) is going to get the data returned from the api. 
+- This means that our response data is only available in the callback function. 
