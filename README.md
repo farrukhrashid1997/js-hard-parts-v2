@@ -97,3 +97,16 @@ Asynchronous Javascript
 - Event loop is constantly running as long as our application is running. 
 - Imagine if you re calling a twitter api, now the function that should run on completion of that api (the callback) is going to get the data returned from the api. 
 - This means that our response data is only available in the callback function. 
+
+Promises
+- When you make a fetch call, the browser will make a fetch request from the browser features, simultaneously its going to also, in JS return out a special object called a Promise, which sits in memory. 
+- When the background function resolves and gets data, it fill the promise which is sitting in the memory. 
+- A JS object called Promise is returned from the fetch api. 
+- The object has two properties. Value and onFulfilled. Value is undefined. 
+- The onfullfilled is hidden property, and an empty array. 
+- XHR is the XML HTTP Request. 
+- When the fetch request is completed, the data returned will set to the value property of the Promise object. 
+- We can add methods and functions inside the onFulfilled, which JS will run automatically when the value property gets filled in. 
+- One more thing that happens, the data when returned will be automatically passed as argument to the functions inside the onFulfilled list.
+- We cant access the onFullfilled property, since its a hidden property. 
+- The then method basically behind the scenes, does var.onFulfilled.push() for the function passed in the then() method.
