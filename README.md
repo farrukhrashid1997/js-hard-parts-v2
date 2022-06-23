@@ -110,3 +110,14 @@ Promises
 - One more thing that happens, the data when returned will be automatically passed as argument to the functions inside the onFulfilled list.
 - We cant access the onFullfilled property, since its a hidden property. 
 - The then method basically behind the scenes, does var.onFulfilled.push() for the function passed in the then() method.
+- Asynchronous means that the code is not executed in the order its declared in. 
+- When the setTimeout is run with a function and a duration inside it, basically the Timer function in the web browser api is run with the duration passed to it, once the timer expires, that function is passed to the callback queue. 
+- A callback queue in the spec is called the task queue. 
+- The function passed in the then function, is stored on the microtask queue. An another queue in this case. 
+- The event loop checks the microtask queue after the callstack is empty and then the callback queue. 
+- There are two queues, any functions which throw out a callback but any function attached to the promise object via the then method is added to the microtask queue. 
+- One important point is, the value part in the promsie object doesnt get filled until all global code has finished running. 
+- Try to read about starving the callback queue. 
+- If a function is returning a Promise object, the functions passed into then are put to the microtask queue.
+- The promise object has an array too, which is called onRejection, a hidden property too. 
+
