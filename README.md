@@ -121,3 +121,11 @@ Promises
 - If a function is returning a Promise object, the functions passed into then are put to the microtask queue.
 - The promise object has an array too, which is called onRejection, a hidden property too. 
 
+Classes and Prototypes - 
+- Functions on objects are called methods. 
+- Another way of creating an empty object is to use, object.create(null), it has some fine grained features. 
+- Whatever you pass in that object.create it is going to return an empty object. 
+- When creating an object with functions, for every instance there will be a function even though the function code is the same. The amt of space required if there are 100 instances. 
+- So to conquer this, we create another object which will have this common function. We can call that a function store. JS will run a method for ex user.increment(), if it doesnt find it there, it checks that function store. 
+- The way to create this is to use object.create method, passing the function store inside it. 
+- 
