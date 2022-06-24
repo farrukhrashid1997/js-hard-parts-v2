@@ -128,4 +128,12 @@ Classes and Prototypes -
 - When creating an object with functions, for every instance there will be a function even though the function code is the same. The amt of space required if there are 100 instances. 
 - So to conquer this, we create another object which will have this common function. We can call that a function store. JS will run a method for ex user.increment(), if it doesnt find it there, it checks that function store. 
 - The way to create this is to use object.create method, passing the function store inside it. 
-- 
+- The link between a function store and an object is made through a hidden property inside the object. This hidden property is called __proto__, otherwise called, proto dunder.
+- So basically when JS does not find a property on an object, it does not panic. It goes to the proto referred object and check the property there. 
+- The argument accepted inside the object.create is always the PROTO property.
+- So basically if we have an object declared, in the local memory, the this keyword would have that object assigned to it. This happens in global and functions execution contexts. 
+- Every object that is created has a default __proto__ property which is linked to Object.prototype.
+- This Object.prototype contains all the default methods like hasOwnProperty etc. 
+- When you do obj.hasOwnProperty, JS will check for this property inside the object itself, if it doesnt find it will go to the proto property of itself (which is another object lets call it funcStore), if it doesnt find it there, then it will go to the __proto_ property of funcStore which is linked to Object.prototype. 
+- So sort of a chain is formed. 
+- Now in Object.prototype, the __proto__ is null.
