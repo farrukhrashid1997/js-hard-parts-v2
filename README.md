@@ -141,4 +141,5 @@ Classes and Prototypes -
 - To fix this issue, we have a call function in which we can pass the this keyword.
 - Another fix to this issue is to declare a arrow function, then the this keyword would refer to the object itself. 
 - Another solution to this is, the new keyword. This automates the hard work, the prototypal nature of JS. 
-- 
+-   Functions are objects, and have a property called prototype. (ONLY IN FUNCTIONS)
+-   
