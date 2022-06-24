@@ -137,3 +137,8 @@ Classes and Prototypes -
 - When you do obj.hasOwnProperty, JS will check for this property inside the object itself, if it doesnt find it will go to the proto property of itself (which is another object lets call it funcStore), if it doesnt find it there, then it will go to the __proto_ property of funcStore which is linked to Object.prototype. 
 - So sort of a chain is formed. 
 - Now in Object.prototype, the __proto__ is null.
+- If we have user.score, this keyword will be referring to user. But if we have a function call with this referred, and its called liked this score(), then the this keyword will be referring the window object in the global memory, this is the default behavior. 
+- To fix this issue, we have a call function in which we can pass the this keyword.
+- Another fix to this issue is to declare a arrow function, then the this keyword would refer to the object itself. 
+- Another solution to this is, the new keyword. This automates the hard work, the prototypal nature of JS. 
+- 
