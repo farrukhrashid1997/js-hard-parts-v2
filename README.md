@@ -10,13 +10,13 @@ Functions and Callbacks
 - A new function means a new execution context
 - When you are passing an variable, for example:
   
-  const numArr = [1,2,3]
-  function multipleBy2(ar){
-    //multiply each element of the array
-  }
-  const multiplied = multiplyBy2(numArr)
+  const numArr = [1,2,3]  
+  function multipleBy2(ar){  
+    //multiply each element of the array  
+  }  
+  const multiplied = multiplyBy2(numArr)   
   
-  - In this case, the variable num, when passed in the function, the paramter arr refers to the value of         numArr. 
+  - In this case, the variable num, when passed in the function, the paramter arr refers to the value of numArr. 
   - This means, that arr is referencing the value of numArr. If we manipulate the array directly (mutate), 
     there will be a, what we call a side effect.
     
